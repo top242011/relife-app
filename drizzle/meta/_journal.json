@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1761048127588,
+      "tag": "0000_bouncy_proteus",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1761048174262,
+      "tag": "0001_stiff_princess_powerful",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1761050050530,
+      "tag": "0002_careful_mongoose",
+      "breakpoints": true
+    }
+  ]
+}
