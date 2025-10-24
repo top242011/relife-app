@@ -15,6 +15,9 @@ import MeetingsPage from "./pages/MeetingsPage";
 import RegulationsPage from "./pages/RegulationsPage";
 import PublicMembers from "./pages/PublicMembers";
 import PublicMeetings from "./pages/PublicMeetings";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import RegistrationApprovals from "./pages/RegistrationApprovals";
 import { useAuth } from "@/_core/hooks/useAuth";
 
 function AdminRouter() {
@@ -28,7 +31,7 @@ function AdminRouter() {
         <Route path="/admin/settings" component={SettingsPage} />
         <Route path="/admin/meetings" component={MeetingsPage} />
         <Route path={"/admin/regulations"} component={RegulationsPage} />
-        {/* Additional admin routes will be added here */}
+        <Route path="/admin/registrations" component={RegistrationApprovals} />
         <Route component={NotFound} />
       </Switch>
     </DashboardLayout>
@@ -47,6 +50,8 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/login"} component={Login} />
+      <Route path={"/register"} component={Register} />
       <Route path={"/public/members"} component={PublicMembers} />
       <Route path={"/public/meetings"} component={PublicMeetings} />
       <Route path={"/404"} component={NotFound} />

@@ -6,6 +6,7 @@ import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { registerOAuthRoutes } from "./oauth";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
+import { createAuthContext } from "./authContext";
 import { serveStatic, setupVite } from "./vite";
 
 function isPortAvailable(port: number): Promise<boolean> {
@@ -40,7 +41,7 @@ async function startServer() {
     "/api/trpc",
     createExpressMiddleware({
       router: appRouter,
-      createContext,
+      createContext: createAuthContext,
     })
   );
   // development mode uses Vite, production mode uses static files
